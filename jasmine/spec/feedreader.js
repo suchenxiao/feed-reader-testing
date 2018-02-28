@@ -52,13 +52,23 @@ $(function() {
          * 来搞清楚我们是怎么实现隐藏/展示菜单元素的。
          */
         it('hides by default', function() {
-            expect($('body').hasClass('slide-menu')).toBe(false);
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
          /* TODO:
           * 写一个测试用例保证当菜单图标被点击的时候菜单会切换可见状态。这个
           * 测试应该包含两个 expectation ： 党点击图标的时候菜单是否显示，
           * 再次点击的时候是否隐藏。
           */
+        it('toggles by click icon', function() {
+            var menuIcon = $('.menu-icon-link');
+			menuIcon.trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBe(false);
+            menuIcon.trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBe(true);	
+        });
+		
+
+  
 	});
 
     /* TODO: 13. 写一个叫做 "Initial Entries" 的测试用例 */
