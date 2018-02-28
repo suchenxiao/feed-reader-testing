@@ -36,6 +36,12 @@ $(function() {
         /* TODO:
          * 编写一个测试遍历 allFeeds 对象里面的所有的源来保证有名字字段而且不是空的。
          */
+        it('have name', function() {
+			allFeeds.forEach(function(feed){
+			    expect(feed.name).toBeDefined();
+			    expect(feed.name.length).not.toBe(0);
+			});
+        });		 
     });
 
 
