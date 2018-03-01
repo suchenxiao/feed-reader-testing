@@ -95,9 +95,10 @@ $(function() {
     });
 
     /* TODO: 写一个叫做 "New Feed Selection" 的测试用例 */
-
+    describe('New Feed Selection', function() {
         /* TODO:
          * 写一个测试保证当用 loadFeed 函数加载一个新源的时候内容会真的改变。
          * 记住，loadFeed() 函数是异步的。
          */
+	});
 }());
